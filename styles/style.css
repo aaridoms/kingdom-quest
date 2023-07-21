@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    background-color: lightgray;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#game-box {
+    background-color: darkgray;
+    width: 800px;
+    height: 600px;
+
+    position: relative;
+    user-select: none;
+    /* overflow: hidden; */
+
+    background-image: url("../images/Background.png");
+    background-position: center;
+    background-size: cover;
+}
+
+#game-screen, #game-over-screen {
+    display: none;
+}
