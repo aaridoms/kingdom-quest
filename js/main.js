@@ -13,7 +13,7 @@ let gameObj;
 const startGame = () => {
     console.log("Iniciando el juego");
 
-    startBtnNode.style.display = "none";
+    startScreenNode.style.display = "none";
     gameScreenNode.style.display = "flex";
 
     gameObj = new Game();

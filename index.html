@@ -3,29 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trivia Game</title>
+    <title>Kingdom Quest</title>
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
     <div id="container">
-
-        <div id="start-screen">
-            <img src="#" alt="logo">
+        <!-- <audio src="./sounds/track.mp3" autoplay="autoplay" loop="loop"></audio> -->
+        <div id="start-screen" class="container">
+            <img src="./images/logo.png" alt="logo">
             <button id="start-btn">Start the game</button>
         </div>
 
-        <div id="game-screen">
+        <div id="game-screen" class="container">
             <div id="game-box">
 
             </div>
         </div>
 
-        <div id="game-over-screen">
+        <div id="game-over-screen" class="container">
             <button id="restart-btn">Restart the game</button>
         </div>
     </div>
     
     <script src="./js/main.js"></script>
     <script src="./js/game.js"></script>
+    <script src="./js/character.js"></script>
 </body>
 </html>

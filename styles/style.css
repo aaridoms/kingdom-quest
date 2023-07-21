@@ -1,19 +1,32 @@
 body {
     margin: 0;
-    background-color: lightgray;
+    /* background-color: white; */
+    background-image: url("../images/background2.png");
 }
 
-#container {
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 50px;
+}
+
+#start-btn {
+    background-color: #fddc4d;
+    color: #ef3004;
+    padding: 20px;
+    font-size: 20px;
+    margin-top: 40px;
+    border-radius: 20px;
 }
 
 #game-box {
     background-color: darkgray;
-    width: 800px;
-    height: 600px;
+    border: 2px solid green;
+    
+    width: 1024px;
+    height: 768px;
 
     position: relative;
     user-select: none;
