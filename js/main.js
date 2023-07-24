@@ -11,7 +11,6 @@ let gameObj;
 
 
 const startGame = () => {
-    console.log("Iniciando el juego");
 
     startScreenNode.style.display = "none";
     gameScreenNode.style.display = "flex";
@@ -21,3 +20,12 @@ const startGame = () => {
 }
 
 startBtnNode.addEventListener("click", startGame);
+document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowUp") {
+        gameObj.character.moveUp();
+    }else if(e.key === "ArrowLeft") {
+        gameObj.character.moveLeft();
+    }else if(e.key === "ArrowRight") {
+        gameObj.character.moveRight();
+    }
+});

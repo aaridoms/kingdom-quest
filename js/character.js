@@ -21,5 +21,28 @@ class Character {
         this.characterNode.style.left = `${this.x}px`
     }
 
+    gravityEffect = () => {
+        this.y += 1;
+        this.updatePosition();
+    }
 
+    moveUp = () => {
+        this.y -= 70;
+        this.updatePosition();
+    }
+
+    moveLeft = () => {
+        this.x -= 20;
+        this.updatePosition();
+    }
+
+    moveRight = () => {
+        this.x += 20;
+        this.updatePosition();
+    }
+
+    updatePosition = () => {
+        this.characterNode.style.left = `${this.x}px`
+        this.characterNode.style.top = `${this.y}px`
+    }
 }

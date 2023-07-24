@@ -3,19 +3,27 @@ class Game {
     this.character = new Character();
 
     this.isGameOn = true;
+    this.isWinCon = true;
+  }
+
+  floorCollision = () => {
+    if (this.character.y > 670) {
+      this.character.y = 670;
+    }
   }
 
   gameLoop = () => {
+    console.log("start game")
+    
+    this.character.updatePosition();
+    this.character.gravityEffect();
 
-
-
-
-
+    this.floorCollision();
 
 
 
     if (this.isGameOn === true) {
-        console.log("hola")
+        
       requestAnimationFrame(this.gameLoop);
     }
   };

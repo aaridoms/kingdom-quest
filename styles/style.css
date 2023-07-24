@@ -30,7 +30,7 @@ body {
 
     position: relative;
     user-select: none;
-    /* overflow: hidden; */
+    overflow: hidden;
 
     background-image: url("../images/Background.png");
     background-position: center;
