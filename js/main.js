@@ -7,6 +7,8 @@ const gameBoxNode = document.querySelector("#game-box");
 const gameOverNode = document.querySelector("#game-over-screen");
 const gameOverBtnNode = document.querySelector("#restart-btn");
 
+const answerBtnNode = document.querySelector("#answer-btn");
+
 let gameObj;
 
 

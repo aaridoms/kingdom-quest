@@ -1,6 +1,7 @@
 class Game {
   constructor() {
     this.character = new Character();
+    this.quest = new Quest();
 
     this.isGameOn = true;
     this.isWinCon = true;
@@ -13,7 +14,7 @@ class Game {
   }
 
   gameLoop = () => {
-    console.log("start game")
+    // console.log("start game")
     
     this.character.updatePosition();
     this.character.gravityEffect();

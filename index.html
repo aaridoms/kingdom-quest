@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kingdom Quest</title>
-    <link rel="stylesheet" href="./styles/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
     <div id="container">
-        <!-- <audio src="./sounds/track.mp3" autoplay="autoplay" loop="loop"></audio> -->
-        <div id="start-screen" class="container">
-            <img src="./images/logo.png" alt="logo">
-            <button id="start-btn">Start the game</button>
-        </div>
+      <!-- <audio src="./sounds/track.mp3" autoplay="autoplay" loop="loop"></audio> -->
+      <div id="start-screen" class="container">
+        <img src="./images/logo.png" alt="logo" />
+        <button id="start-btn">Start the game</button>
+      </div>
 
-        <div id="game-screen" class="container">
-            <div id="game-box">
-
-            </div>
+      <div id="game-screen" class="container">
+        <div id="game-box">
+          <div id="answer-btn">
+            <div id="answer1">hola</div>
+            <div id="answer2">hola2</div>
+            <div id="answer3">hola3</div>
+          </div>
         </div>
+      </div>
 
-        <div id="game-over-screen" class="container">
-            <button id="restart-btn">Restart the game</button>
-        </div>
+      <div id="game-over-screen" class="container">
+        <img src="./images/you_loose.png" alt="you_loose">
+        <button id="restart-btn">Restart the game</button>
+      </div>
     </div>
-    
+
     <script src="./js/main.js"></script>
     <script src="./js/game.js"></script>
     <script src="./js/character.js"></script>
-</body>
+    <script src="./js/quest.js"></script>
+  </body>
 </html>
