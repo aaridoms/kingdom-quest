@@ -22,7 +22,7 @@ class Character {
     }
 
     gravityEffect = () => {
-        this.y += 1;
+        this.y += 4;
         this.updatePosition();
     }
 

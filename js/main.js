@@ -21,7 +21,24 @@ const startGame = () => {
     gameObj.gameLoop();
 }
 
+const restartGame = () => {
+    gameOverNode.style.display = "none";
+    startScreenNode.style.display = "flex";
+
+    gameBoxNode.innerHTML = " ";
+
+    gameObj = new Game;
+    gameObj.gameLoop();
+}
+
+const gameOver = () => {
+    gameObj.isGameOn = false;
+    gameBoxNode.style.display = "none";
+    gameOverNode.style.display = "flex";
+}
+
 startBtnNode.addEventListener("click", startGame);
+gameOverBtnNode.addEventListener("click", restartGame);
 document.addEventListener("keydown", (e) => {
     if (e.key === "ArrowUp") {
         gameObj.character.moveUp();

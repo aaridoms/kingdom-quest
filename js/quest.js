@@ -1,32 +1,10 @@
 class Quest {
-  constructor() {
-    let quests = [
-      {
-        quest: "¿Cuál es mi color favorito?",
-        answer: ["rojo", "azul", "verde"],
-        correctAnswer: "rojo",
-      },
-      {
-        quest: "¿Cuál es mi comida favorita?",
-        answer: ["pizza", "hamburguesa", "pasta"],
-        correctAnswer: "pizza",
-      },
-      {
-        quest: "¿Cuál es mi animal favorito?",
-        answer: ["perro", "gato", "pez"],
-        correctAnswer: "perro",
-      },
-      {
-        quest: "¿Cuál es mi peli favorita?",
-        answer: ["Harry Potter", "El señor de los anillos", "Star Wars"],
-        correctAnswer: "Harry Potter",
-      },
-    ];
-
-    let randomQuest = Math.floor(Math.random() * quests.length);
+  constructor(num) {
+    
+    this.randomQuest = num;
 
     this.questNode = document.createElement("div");
-    this.questNode.textContent = quests[randomQuest].quest;
+    this.questNode.textContent = questsAndAnswers[this.randomQuest].quest;
     this.questNode.id = "quest";
     gameBoxNode.append(this.questNode);
 

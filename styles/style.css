@@ -53,12 +53,12 @@ body {
 
 #answer-btn {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     text-align: center;
     padding-top: 600px;
 }
 
-#answer1, #answer2, #answer3 {
+.answer1, #answer2, #answer3 {
     background-color: black;
     color: white;
     width: 50px;
