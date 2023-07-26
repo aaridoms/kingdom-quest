@@ -1,18 +1,19 @@
 class Answers {
-  constructor(num) {
+  constructor(num, posy, posx) {
 
     this.num = num;
 
     this.answerBtnNode = document.querySelector("#answer-btn");
 
     this.answerBtn1Node = document.createElement("div");
+    this.answerBtn1Node.textContent = this.num;
     this.answerBtn1Node.className = "answer1";
     this.answerBtnNode.append(this.answerBtn1Node);
 
-    this.x = 30;
-    this.y = 200;
-    this.w = 50;
-    this.h = 30;
+    this.x = posx;
+    this.y = posy;
+    this.w = 70;
+    this.h = 55;
 
 
     
@@ -23,7 +24,7 @@ class Answers {
     // * Posicion de la quest
     this.answerBtn1Node.style.position = "absolute";
     this.answerBtn1Node.style.top = `${this.y}px`;
-    this.answerBtn1Node.style.left = `${this.x}%`;
+    this.answerBtn1Node.style.left = `${this.x}px`;
 
 
   }
