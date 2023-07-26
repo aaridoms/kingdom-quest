@@ -10,6 +10,8 @@ const gameOverBtnNode = document.querySelector("#restart-btn");
 const answerBtnNode = document.querySelector("#answer-btn");
 
 let gameObj;
+let jumpSound = new Audio("../sounds/jump.mp3");
+let walkSound = new Audio("../sounds/walk.mp3");
 
 
 const startGame = () => {
@@ -31,20 +33,23 @@ const restartGame = () => {
     gameObj.gameLoop();
 }
 
-const gameOver = () => {
-    gameObj.isGameOn = false;
-    gameBoxNode.style.display = "none";
-    gameOverNode.style.display = "flex";
-}
+// const gameOver = () => {
+//     gameObj.isGameOn = false;
+//     gameBoxNode.style.display = "none";
+//     gameOverNode.style.display = "flex";
+// }
 
 startBtnNode.addEventListener("click", startGame);
 gameOverBtnNode.addEventListener("click", restartGame);
 document.addEventListener("keydown", (e) => {
     if (e.key === "ArrowUp") {
+        jumpSound.play();
         gameObj.character.moveUp();
     }else if(e.key === "ArrowLeft") {
+        // walkSound.play();
         gameObj.character.moveLeft();
     }else if(e.key === "ArrowRight") {
+        // walkSound.play();
         gameObj.character.moveRight();
     }
 });

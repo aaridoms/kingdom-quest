@@ -37,6 +37,23 @@ body {
     background-size: cover;
 }
 
+#game-over-screen img {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    /* top: 0;
+    left: 0; */
+}
+
+#restart-btn {
+    background-color: #fddc4d;
+    color: #ef3004;
+    padding: 20px;
+    font-size: 20px;
+    margin-top: 40px;
+    border-radius: 20px;
+}
+
 #game-screen, #game-over-screen {
     display: none;
 }

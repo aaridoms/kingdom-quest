@@ -5,17 +5,20 @@ class Game {
     this.randomQuest = Math.floor(Math.random() * questsAndAnswers.length);
     this.quest = new Quest(this.randomQuest);
 
-    // this.response = new Answers(randomQuest);
-    // console.log(questsAndAnswers[randomQuest].answer);
-    // console.log(questsAndAnswers[randomQuest].correctAnswer);
-    // this.answer1 = new Answers(questsAndAnswers[randomQuest].answer[0], 600, 30);
-    // this.answer2 = new Answers(questsAndAnswers[randomQuest].answer[1], 600, 50);
-    // this.answer3 = new Answers(questsAndAnswers[randomQuest].answer[2], 600, 70);
+    this.correctAnswer = questsAndAnswers[this.randomQuest].correctAnswer;
 
     this.answerArr = [];
 
     this.isGameOn = true;
     this.isWinCon = true;
+
+    this.onGameAudio = new Audio("../sounds/track1.mp3");
+  }
+
+  gameOver = () => {
+    this.isGameOn = false;
+    gameScreenNode.style.display = "none";
+    gameOverNode.style.display = "flex";
   }
 
   answerSpawn = (num) => {
@@ -40,10 +43,27 @@ class Game {
         this.character.y < eachAnswer.y + eachAnswer.h &&
         this.character.y + this.character.h > eachAnswer.y
       ) {
-        console.log("hola")
+        if (
+          eachAnswer.num === this.correctAnswer
+        ) {
+          this.isWinCon = true;
+          console.log("correcto");
+        }else {
+          this.gameOver();
+        }
       }
     });
-  }
+  };
+
+  correctAnswer = () => {
+    if (this.answerArr === questsAndAnswers[this.randomQuest].correctAnswer) {
+      this.isWinCon = true;
+      console.log("correcto");
+      return true;
+    } else {
+      return false;
+    }
+  };
 
   floorCollision = () => {
     if (this.character.y > 670) {
@@ -52,6 +72,8 @@ class Game {
   };
 
   gameLoop = () => {
+    this.onGameAudio.play();
+    
     this.answerSpawn(this.randomQuest);
     this.buttonCollision();
     this.character.updatePosition();
@@ -61,6 +83,8 @@ class Game {
 
     if (this.isGameOn === true) {
       requestAnimationFrame(this.gameLoop);
+    }else {
+      this.onGameAudio.pause();
     }
   };
 }
