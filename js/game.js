@@ -12,7 +12,10 @@ class Game {
     this.isGameOn = true;
     this.isWinCon = true;
 
-    this.onGameAudio = new Audio("../sounds/track1.mp3");
+    this.counter = 0;
+
+    this.onGameAudio = new Audio("./sounds/track1.mp3");
+    this.onGameAudio.play();
   }
 
   gameOver = () => {
@@ -47,7 +50,8 @@ class Game {
           eachAnswer.num === this.correctAnswer
         ) {
           this.isWinCon = true;
-          console.log("correcto");
+          this.counter++;
+          console.log("correcto" + this.counter);
         }else {
           this.gameOver();
         }
@@ -57,8 +61,6 @@ class Game {
 
   correctAnswer = () => {
     if (this.answerArr === questsAndAnswers[this.randomQuest].correctAnswer) {
-      this.isWinCon = true;
-      console.log("correcto");
       return true;
     } else {
       return false;
@@ -72,7 +74,7 @@ class Game {
   };
 
   gameLoop = () => {
-    this.onGameAudio.play();
+    console.log("hola")
     
     this.answerSpawn(this.randomQuest);
     this.buttonCollision();

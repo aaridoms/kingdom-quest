@@ -10,8 +10,8 @@ const gameOverBtnNode = document.querySelector("#restart-btn");
 const answerBtnNode = document.querySelector("#answer-btn");
 
 let gameObj;
-let jumpSound = new Audio("../sounds/jump.mp3");
-let walkSound = new Audio("../sounds/walk.mp3");
+let jumpSound = new Audio("./sounds/jump.mp3");
+let walkSound = new Audio("./sounds/walk.mp3");
 
 
 const startGame = () => {
@@ -27,17 +27,8 @@ const restartGame = () => {
     gameOverNode.style.display = "none";
     startScreenNode.style.display = "flex";
 
-    gameBoxNode.innerHTML = " ";
-
-    gameObj = new Game;
-    gameObj.gameLoop();
+    gameBoxNode.innerHTML = `<div id="answer-btn"></div>`;
 }
-
-// const gameOver = () => {
-//     gameObj.isGameOn = false;
-//     gameBoxNode.style.display = "none";
-//     gameOverNode.style.display = "flex";
-// }
 
 startBtnNode.addEventListener("click", startGame);
 gameOverBtnNode.addEventListener("click", restartGame);
