@@ -30,7 +30,7 @@ body {
 
     position: relative;
     user-select: none;
-    /* overflow: hidden; */
+    overflow: hidden;
 
     background-image: url("../images/Background.png");
     background-position: center;
@@ -45,6 +45,15 @@ body {
     left: 0; */
 }
 
+#playagain-btn {
+    background-color: #fddc4d;
+    color: #ef3004;
+    padding: 20px;
+    font-size: 20px;
+    margin-top: 40px;
+    border-radius: 20px;
+}
+
 #restart-btn {
     background-color: #fddc4d;
     color: #ef3004;
@@ -54,7 +63,7 @@ body {
     border-radius: 20px;
 }
 
-#game-screen, #game-over-screen {
+#game-screen, #game-over-screen, #win-screen{
     display: none;
 }
 
