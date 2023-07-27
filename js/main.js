@@ -14,7 +14,6 @@ const winBtnNode = document.querySelector("#playagain-btn");
 
 let gameObj;
 let jumpSound = new Audio("./sounds/jump.mp3");
-let walkSound = new Audio("./sounds/walk.mp3");
 
 
 const startGame = () => {
@@ -48,10 +47,8 @@ document.addEventListener("keydown", (e) => {
         jumpSound.play();
         gameObj.character.moveUp();
     }else if(e.key === "ArrowLeft") {
-        // walkSound.play();
         gameObj.character.moveLeft();
     }else if(e.key === "ArrowRight") {
-        // walkSound.play();
         gameObj.character.moveRight();
     }
 });

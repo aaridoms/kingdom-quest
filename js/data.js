@@ -1,27 +1,47 @@
 const questsAndAnswers = [
   {
-    quest: "¿Cuál es mi color favorito?",
-    answer: ["rojo", "azul", "verde"],
-    correctAnswer: "rojo",
+    quest: "En que lenguaje esta creado TypeScript?",
+    answer: ["JavaScript", "Python", "TypeScript"],
+    correctAnswer: "TypeScript",
   },
   {
-    quest: "¿Cuál es mi comida favorita?",
-    answer: ["pizza", "hamburguesa", "pasta"],
-    correctAnswer: "pizza",
+    quest: "¿Cuál es la primera version de Android?",
+    answer: ["ApplePie", "Mango", "Cupcake"],
+    correctAnswer: "ApplePie",
   },
   {
-    quest: "¿Cuál es mi animal favorito?",
-    answer: ["perro", "gato", "pez"],
-    correctAnswer: "perro",
+    quest: "¿Qué unidad tiene más megabytes?",
+    answer: ["exabyte", "zettabyte", "yottabyte"],
+    correctAnswer: "yottabyte",
   },
   {
-    quest: "¿Cuál es mi peli favorita?",
-    answer: ["Harry Potter", "El señor de los anillos", "Star Wars"],
-    correctAnswer: "El señor de los anillos",
+    quest: "¿Cuál fue el primer nombre de JavaScript?",
+    answer: ["Mocha", "Latte", "Espresso"],
+    correctAnswer: "Mocha",
   },
   {
-    quest: "¿Cuál es mi serie favorita?",
-    answer: ["Friends", "The Big Bang Theory", "How I Met Your Mother"],
-    correctAnswer: "Friends",
+    quest: "¿Cómo se llama la mascota de GitHub?",
+    answer: ["Catoctpuss", "Octocat", "Octopus"],
+    correctAnswer: "Octocat",
+  },
+  {
+    quest: "¿Cuál es el nombre del primer lenguaje de programación?",
+    answer: ["Fortran", "Cobol", "Plankalkül"],
+    correctAnswer: "Fortran",
+  },
+  {
+    quest: "¿Cómo se llama el primer ordenador doméstico de Apple?",
+    answer: ["AppleI", "Lisa", "Mac"],
+    correctAnswer: "AppleI",
+  },
+  {
+    quest: "¿Quiém creo Boostrap?",
+    answer: ["Facebook", "Twitter", "Google"],
+    correctAnswer: "Twitter",
+  },
+  {
+    quest: "¿Cuál fue el primer de la primera version de Facebook?",
+    answer: ["C", "JavaScript", "PHP"],
+    correctAnswer: "PHP",
   },
 ];

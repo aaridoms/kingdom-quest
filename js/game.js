@@ -19,8 +19,13 @@ class Game {
     this.counter = 0;
 
     this.onGameAudio = new Audio("./sounds/track1.mp3");
+    this.trueAudio = new Audio("./sounds/true.wav");
+    this.looseAudio = new Audio("./sounds/loose.wav");
+    this.winSoundAudio = new Audio("./sounds/winsound.wav");
     this.onGameAudio.play();
     this.onGameAudio.volume = 0.1;
+    this.looseAudio.volume = 0.1;
+    this.winSoundAudio.volume = 0.1;
   }
 
   gameOver = () => {
@@ -61,22 +66,20 @@ class Game {
         if (eachAnswer.num === this.correctAnswer) {
           this.regenAnswers();
           this.counter++;
-          if(this.counter === 3) {
+          if(this.counter === 5) {
+            this.winSoundAudio.play();
             this.winCondition();
           }
         } else {
-          this.gameOver();
-          // this.health--;
-          // this.healthNode.innerHTML = this.health;
-          // if (this.health === 0) {
-          //   this.gameOver();
-          // }  
+          this.looseAudio.play();
+          this.gameOver();  
         }
       }
     });
   };
 
   regenAnswers = () => {
+    this.trueAudio.play();
     answerBtnNode.innerHTML = "";
     this.isCol = false;
     this.answerArr = [];
