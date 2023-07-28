@@ -115,4 +115,4 @@
 
 |  Slides ![Game-loop](./images/character.png) | Deploy ![Game-loop](./images/character.png)|
 |---|---|
-| [Link](#) | [Link](https://aaridoms.github.io/kingdom-quest/) |
+| [Link](https://docs.google.com/presentation/d/1qDc3C1ZK3LwJv5LsxvLvCCRP_u5AG92G0Pb-GTRj4H0/edit#slide=id.gc6f80d1ff_0_0) | [Link](https://aaridoms.github.io/kingdom-quest/) |
